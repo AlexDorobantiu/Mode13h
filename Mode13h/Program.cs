@@ -13,7 +13,7 @@ namespace Mode13h
         [STAThread]
         static void Main()
         {
-            using (var game = new Game1())
+            using (var game = new DemoGame())
                 game.Run();
         }
     }
