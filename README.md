@@ -22,4 +22,5 @@ For a simple example on how to use this project, check out the DemoGame class.
 [![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)][CreativeCommonsLicence]
 <br />
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][CreativeCommonsLicence]
-[CreativeCommonsLicence]: http://creativecommons.org/licenses/by-nc-sa/4.0/ 
+
+[CreativeCommonsLicence]: http://creativecommons.org/licenses/by-nc-sa/4.0/
