@@ -13,7 +13,8 @@ For a simple example on how to use this project, check out the DemoGame class.
 ### Technology:
  - Written in plain **C#** using **Visual Studio 2015**
  - It is implemented on top of the MonoGame framework https://en.wikipedia.org/wiki/MonoGame http://www.monogame.net/
- 
+<br />
+In order to compile the project as is, you need to install the MonoGame framework first.
 
 #### Screenshot
 ![Mode13h Screenshot](mode13h_printscreen.png)
