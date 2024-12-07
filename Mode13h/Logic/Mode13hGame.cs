@@ -11,9 +11,10 @@ namespace Mode13h.Logic
     /// </summary>
     public class Mode13hGame : Game
     {
+        private const string gameTitle = "Mode13h";
         private const int defaultScreenWidth = 320;
         private const int defaultScreenHeight = 200;
-        private const int defaultScreenZoom = 4;
+        private const int defaultScreenZoom = 3;
         private const bool defaultFullScreen = false;
         private const byte opaqueAlpha = 255;
         public readonly int screenWidth;
@@ -32,13 +33,22 @@ namespace Mode13h.Logic
 
         public Mode13hGame(int screenWidth = defaultScreenWidth, int screenHeight = defaultScreenHeight, int screenZoom = defaultScreenZoom, bool fullScreen = defaultFullScreen)
         {
-            graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
+            this.graphics = new GraphicsDeviceManager(this);
+            this.Content.RootDirectory = "Content";
 
             this.screenWidth = screenWidth;
             this.screenHeight = screenHeight;
             this.screenZoom = screenZoom;
             this.fullScreen = fullScreen;
+
+            // this.IsFixedTimeStep = false; // disables the wait inside the update loop
+            // this.graphics.SynchronizeWithVerticalRetrace = false; // disables waiting for vertical retrace
+            // this.TargetElapsedTime = new TimeSpan(0, 0, 0, 0, milliseconds: 17); // force calling the update loop every 17 milliseconds
+        }
+
+        protected virtual string GetGameTitle()
+        {
+            return gameTitle;
         }
 
         /// <summary>
@@ -97,8 +107,8 @@ namespace Mode13h.Logic
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            //GraphicsDevice.Clear(Color.Black);
-
+            // GraphicsDevice.Clear(Color.Black);
+            
             for (int position = 0; position < screenWidth * screenHeight; position++)
             {
                 byte paletteIndex = pixels[position];
@@ -111,6 +121,9 @@ namespace Mode13h.Logic
             spriteBatch.Begin();
             spriteBatch.Draw(canvas, new Rectangle(0, 0, screenWidth * screenZoom, screenHeight * screenZoom), Color.White);
             spriteBatch.End();
+
+            double framesPerSecond = 1.0d / gameTime.ElapsedGameTime.TotalSeconds;
+            Window.Title = GetGameTitle() + framesPerSecond.ToString(" 0.00fps");
 
             base.Draw(gameTime);
         }

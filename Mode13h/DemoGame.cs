@@ -3,7 +3,6 @@ using Microsoft.Xna.Framework.Input;
 using Mode13h.Logic;
 using Mode13h.Logic.Util;
 using System;
-using System.Collections.Generic;
 
 namespace Mode13h
 {
@@ -17,6 +16,7 @@ namespace Mode13h
     class DemoGame : Mode13hGame
     {
         Random random = new Random(123);
+
         void drawRandomPixel()
         {
             pixels[random.Next(screenWidth * screenHeight)] = (byte)random.Next(byte.MaxValue);

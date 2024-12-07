@@ -1,6 +1,6 @@
 ﻿namespace Mode13h.Logic
 {
-    public class PaletteEntry
+    public struct PaletteEntry
     {
         public byte red;
         public byte green;

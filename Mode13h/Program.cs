@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using System;
 
 namespace Mode13h
 {
@@ -13,8 +14,10 @@ namespace Mode13h
         [STAThread]
         static void Main()
         {
-            using (var game = new DemoGame())
+            using (Game game = new DemoGame())
+            {
                 game.Run();
+            }
         }
     }
 }
