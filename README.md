@@ -1,13 +1,13 @@
 Mode13h - A programming helper
 ===================================
-Version 1.0 Released by [Alexandru Dorobanțiu](http://alex.dorobantiu.ro) on 15.12.2019
+Version 1.1 Released by [Alexandru Dorobanțiu](http://alex.dorobantiu.ro) on 8.12.2024
 
 ### Details
 If you don't know what Mode13h is, check https://en.wikipedia.org/wiki/Mode_13h
 <br />
 The purpose of the project is to separate the boilerplate code needed to use the graphics card like the mode 13h was enabled, and allow focusing on writing the business logic.
 The purpose is not to have a high performance emulator, but to have a simple and easy to use framework.
-For a simple example on how to use this project, check out the DemoGame class.
+For some simple examples on how to use this project, check out the (DemoGame, Fire, Lines) classes.
 
 
 ### Technology:
